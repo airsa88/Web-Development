@@ -1,0 +1,113 @@
+<!DOCHTML>
+<html>
+<title>
+    example
+    </title>
+    <head>
+		
+    <h1>Application to Register</h1>
+		<hr>
+        <h2> Previous Application</h2>
+        <Div class = "first">
+        <dt>
+            <dl> Account Number : <b>10001</b></dl>
+            <dl> Legal name : <b> Antony</b></dl>
+            </dt>
+        </Div>
+<style>
+	
+.label:before{
+ content:"*" ;
+color:red    
+}
+	.hidden1:before{
+ content:"*" ;
+color:red    
+}
+	
+	.infolink:after
+{
+    content: '?';
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 1.8ex;
+    height: 1.8ex;
+    font-size: 1.4ex;
+    line-height: 1.8ex;
+    border-radius: 1.2ex;
+    margin-right: 4px;
+    padding: 4px;
+    color: white;
+    background: black;
+    text-decoration: none;
+}
+	
+	.button {
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+	.button5 {background-color: #555555;} /* Black */
+
+</style>
+    </head>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+        
+	function myFunction() {
+		$(option2).click(function(){
+       $(test).hide();
+			
+    });
+	    $(option1).click(function(){
+        $(test).show();
+			
+    });
+	}
+	
+	function save() {
+    var role = $(':radio[name=radio1]:checked').val();
+	var fieldValue = document.getElementById('value1').value;
+	var fieldValue2 = document.getElementById('value2').value;
+	localStorage.setItem('t1',role);	
+	localStorage.setItem('text',fieldValue);
+	localStorage.setItem('text2',fieldValue2);
+			
+		}
+</script>
+    
+<body>
+	<div class="label" id="req">
+    Has your organization ever applied  <strong>(required) </strong><a class="infolink" href="test2.html"></a></div><br>
+	<br>
+    <input type="radio" id = "option1" name = "radio1" onclick = "myFunction()" value = "Yes"/>YES<br>
+    <input type="radio" id = "option2" name = "radio1" onclick = "myFunction()" value = "No"/>NO<br>
+<br>
+<form name = "test">
+<label class = "hidden1"><b> Name of org</b></label><br>
+<input type = "text" id = "value1" name = "test1" class = "hidden" value = " "/>
+<br>	
+<br>	
+<label class = "hidden"><b>File Number</b></label><br>
+ <input type = "text" id = "value2" name = "test2" value = " " class = "hidden" />
+</form>
+	
+<br>		
+<form action = "test4.html">
+	<div>
+			 <input type="submit" value="Next" class="button button5" onclick="save()" />
+	</div>
+		</form>	
+
+</body>
+
+
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<title>
+Review
+    </title>
+    <head>
+		
+    <h1>Application to Register</h1>
+		<hr>
+        <h2>Previous Application</h2>
+		<h3>Review </h3>
+        <Div class = "first">
+        <dt>
+            <dl> Account Number : <b>10001</b></dl>
+            <dl> Legal name : <b> Antony</b></dl>
+            </dt>
+        </Div>
+		<h3>Previous Registration</h3>
+		<button onclick="myFunction()">Registration <i class="down"></i></button>
+		<form action = "test1.html">
+			 <input type="submit" value="Change this" style="float: right;">
+		</form>
+ 
+ <style>
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding:3px;
+    }
+
+   .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        }
+	 .button {
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+	 .button5 {background-color: #555555;} /* Black */
+   </style>
+    </head>
+
+	<script>
+	
+	function load() {
+	var storedVal = localStorage.getItem('t1');
+	var storedValue = localStorage.getItem('text');
+	var storedValue2 = localStorage.getItem('text2');
+	if(storedVal == "Yes") {
+	document.getElementById('value0').innerHTML = "Has your organization ever applied?";
+	document.getElementById('value1').innerHTML = storedVal;
+	document.getElementById('value3').innerHTML = "Name of your org";	
+	document.getElementById('value2').innerHTML = storedValue;
+	document.getElementById('value4').innerHTML = "File number";	
+	document.getElementById('value5').innerHTML = storedValue2;
+	}
+		else {
+	document.getElementById('value6').innerHTML = "Has your organization ever applied?";
+	document.getElementById('value7').innerHTML = storedVal;
+		}
+		
+		}
+		
+	function passValue() {
+		var fValue1 = document.getElementById('test3').value;
+		localStorage.setItem('te1',fValue1);
+	}	
+	function myFunction() {
+    var x = document.getElementById('form1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+	
+	
+	</script>
+	
+
+	<body onload="load();">
+		<form id = "form1">
+		 <p id = "value0"></p>
+		<div id = "value1"></div>
+		 <p id = "value3"></p>
+	     <div id = "value2"></div>
+		 <p id = "value4"></p>
+	     <div id ="value5"></div>
+		<p id = "value6"></p>
+		<div id = "value7"></div>
+			</form>
+		<br>
+		<form action="test3.html">
+		<div>
+		<input type="submit" id = "test3" value="Done" class="button button5" onclick="passValue()" />
+			</div>
+			</form>
+	</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<title>First screen</title>
+		
+	<style>
+		
+* {
+background-color: white;
+}
+		
+#myProgress {
+  width: 90%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 0%;
+  height: 20px;
+  background-color: #4CAF50;
+  text-align: right;
+  line-height: 20px;
+  color: white;
+  vertical-align: right;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+	
+<script>
+function move() {
+  var sVal1 = localStorage.getItem('te1');
+  if(sVal1) {	
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+	  document.getElementById('sValue0').innerHTML = "Complete";
+	  localStorage.clear();
+  }
+	else {
+		
+	}
+}
+	</script>
+	 <h1>Application to Register</h1>
+		<hr>
+	<h2>Overview</h2>
+	<Div class = "first">
+        <dt>
+            <dl> Account Number : <b>10001</b></dl>
+            <dl> Legal name : <b> Antony</b></dl>
+            </dt>
+        </Div>
+	<br>
+	<h3>Your progress</h3>
+	</head>
+
+<body onload="move();">
+	<br>
+	<table>
+  <tr>
+    <th>Section</th>
+    <th>Progress</th>
+    <th>Status</th>
+	<th>Action</th>  
+  </tr>
+  <tr>
+    <td>Identification of Org</td>
+    <td>
+   <div id="myProgress">
+  <div id="myBar"></div>
+    </div>
+	  </td>
+    <td>
+	  <div id = "sValue0">Not Started</div>
+	  </td>
+	<td>
+		<form action="test1.html">
+		<input type="submit" value="Start" />
+		</form>
+		</td>  
+  </tr>
+  <tr>
+   <td>Previous App</td>
+    <td>
+   <div id="myProgress">
+  <div id="myBar"></div>
+    </div>
+	  </td>
+    <td>Not started</td>
+	<td>Start</td>  
+  </tr>
+  <tr>
+    <td>Org Structure</td>
+    <td>
+   <div id="myProgress">
+  <div id="myBar"></div>
+    </div>
+	  </td>
+    <td>Not started</td>
+	<td>Start</td>  
+  </tr>
+</table>
+	<br>
+	<br>
+	</body>
+
+</html>
