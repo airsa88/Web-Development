@@ -16,12 +16,24 @@ Review
             </dt>
         </Div>
 		<h3>Previous Registration</h3>
-		<button onclick="myFunction()">Registration <i class="down"></i></button>
+		<a onclick="myFunction()">Registration <i class="down"></i></a>
 		<form action = "test1.html">
 			 <input type="submit" value="Change this" style="float: right;">
 		</form>
  
  <style>
+	 
+	 /* mouse over link */
+a:hover {
+    text-decoration: underline;
+	color: blue;
+}
+
+a:link {
+    text-decoration: none;
+}
+	
+	 
 i {
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -103,7 +115,8 @@ i {
 		<input type="submit" id = "test3" value="Done" class="button button5" onclick="passValue()" />
 			</div>
 			<br>
-			<a href = "test2.html">Return to Overview</a>
+			<br>
+			<a style = "text-decoration: underline;" href = "test2.html">Return to Overview</a>
 			</form>
 	</body>
 

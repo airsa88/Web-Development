@@ -10,7 +10,16 @@
 * {
 background-color: white;
 }
-		
+	
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+	background-color: PapayaWhip;
+}			
 #myProgress {
   width: 90%;
   background-color: #ddd;
@@ -27,7 +36,7 @@ background-color: white;
 }
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 90%;
     border: 1px solid #ddd;
 }
 
@@ -53,7 +62,7 @@ function move() {
     } else {
       width++; 
       elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
+      //elem.innerHTML = width * 1  + '%';
     }
   }
 	  document.getElementById('sValue0').innerHTML = "Complete";
@@ -98,9 +107,7 @@ function move() {
 	  <div id = "sValue0">Not Started</div>
 	  </td>
 	<td>
-		<form action="test1.html">
-			<button type="submit" id = "test01" value="">Start</button>
-		</form>
+<div id = "test01"><a href="test1.html">Start</a></div>
 		</td>  
   </tr>
   <tr>
