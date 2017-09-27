@@ -124,4 +124,60 @@ background-color: lightblue;
 color:red    
 }
 </style>
-==================================================
+============== New Refernces - DT - 09/27/17 ====================================
+
+Tool tip - https://www.w3schools.com/howto/howto_css_tooltip.asp
+
+Color change - https://www.w3schools.com/cssref/sel_hover.asp
+
+Modal box for Question mark - https://www.w3schools.com/howto/howto_css_modals.asp
+
+test3.html :
+
+<button type="submit" id = "test01" value="">Start</button>
+
+test4.html
+
+<button onclick="myFunction()">Registration <i class="down"></i></button>
+
+CSS styling links ---- https://www.w3schools.com/css/css_link.asp
+
+Footer example:
+
+<footer>Copyright &copy; W3Schools.com</footer>
+
+Layouts:
+
+https://www.w3schools.com/html/html_layout.asp
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 90%;
+    height: 50%
+    border: 0.5px solid gray;
+    border-color: LightGoldenRodYellow; 
+    padding:10px 5px 28px 20px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<br>
+  <input type="submit" value="Change" style="float: left;">
+  <input type="submit" value="Change2" style="float: right;">
+  <br>
+  <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+</div>
+</body>
+</html>
+
+==================================================================================
+
+
+
+
