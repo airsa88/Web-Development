@@ -1,0 +1,342 @@
+
+Technical Background
+4.1 Application Architecture
+Mobile technology is revolutionizing work, e-commerce, the market and news. For a company that wants to build a new application for their end users, the most difficult part is to decide the Application Architecture. We reached our audience to find out which is the best architecture for our problem statement. The application should feature calendar, events, and notification of events and enable the user to search, sort and filter the events. There are mainly three types of architecture (Hybrid, Native, Web) for development available in the market to develop these features along with an add on integration to cloud drives and emails. Before going on to select appropriate frameworks, it is essential to first select the most appropriate architecture for the mobile apps.
+Proposed Solution
+
+We have selected Hybrid Application Architecture as the best suited for our proposed solution. It is a big challenge to develop the high-performance application with minimum cost and time. Hybrid mobile applications are built in a similar manner to websites. Both web and hybrid use a combination of technologies like HTML, CSS, and JavaScript. However, instead of targeting a mobile browser, hybrid applications target a WebView hosted inside a native container. This enables developers to do things like access the hardware capabilities of the mobile device.
+
+Figure 1 lists some features of hybrid applications. Others include:
+-	Can function whether or not the device is connected. 
+-	Integration with a device’s file system.  
+-	Integration with Web-based services. 
+-	An embedded browser to improve access to dynamic online content.
+-	Exported into cross-platform operating system
+-	It provides an easy approach to the administrative tasks, as it offers BYOD (Bring Your Own Device) environment.
+
+To build a hybrid mobile app, developers write the core of the application as an HTML5 mobile app and then place a native device wrapper around it. The native wrapper acts as an intermediary and translates instructions into a form that the mobile device understands. There are many tools available to build the application such as React Native, Onsen UI, Ionic, Framework 7 or using PhoneGap. 
+
+Kanjilal (2015) describes the different design patterns insight and importance to design patterns i.e. MVC (Model-View-Controller), MVP (Model-View Presenter) and MVVM (Model-View-ViewModel). MVP (Model-View-Presenter) Sandbox Mobile Application design pattern perfect for our project as our project requirement is one to one interaction with the event and news updates also viewer only interacts with presenter this matches the best with our profile. 
+4.1.2 Alternative Solutions
+
+Native Application:
+Building a native application means using the native language of the platform, Objective-C on iOS, and Java on Android. The main advantage of native applications is their performance. Native apps are compiled into machine code (Dalvik bytecode under Android), which gives the best performance you can get from the mobile phone. This includes fast and fluid animations as well as full access to phone hardware, multi-touch support and the latest APIs.
+ 
+Native application features:
+-	Efficient and have better performance, due to the tight coupling with the device’s built-in features.
+-	Quite safe and secure, since they reside on the mobile, and can hence use the security features of the mobile.
+-	Built-in features of the mobile, such as the GPS, movement detector or the camera. These specialized apps focus on giving better and unique user experience, as expected from the nature and design of the phone.
+
+Web Application:
+
+Web apps are not real applications; they are really websites that, in many ways, look and feel like native applications, but are not implemented as such. They are run by a browser and typically written in HTML5. Users first access them as they would access any web page: they navigate to a special URL and then have the option of “installing” them on their home screen by creating a bookmark to that page.
+Web apps became really popular when HTML5 came around and people realized that they can obtain native-like functionality in the browser.
+
+4.1.3 Evaluation
+
+Both native and hybrid development fulfill the different needs and preferences of users and developers (Figure 2), and neither of them can be thought as a perfect solution. They have their strengths and weaknesses and after careful inspection we have decided which of them fits better and which one we will use our application.
+
+It is a big challenge to develop the high-performance application with minimum cost and time. Hybrid mobile applications are built in a similar manner to websites. Both web and hybrid use a combination of technologies like HTML, CSS, and JavaScript. However, instead of targeting a mobile browser, hybrid applications target a WebView hosted inside a native container. This enables developers to do things like access the hardware capabilities of the mobile device.
+
+Table 1: Comparison of Architectures (Pronschinske, 2014)
+ Criteria	Native	Hybrid	Web
+Cost	Commonly the highest of the three choices if developing for multi platforms	Similar to pure web costs, but extra skills are required for hybrid tools	Lowest cost due to single codebase and common skillset
+Code Reusability
+and Portability	Code for one platform only	Most hybrid tool will enable portability of a single codebase to the major mobile platforms	Browser compatibility and performance are the only concern
+Device Access	Platform SDK enables access to all device APIs	Many device APIs closed to web apps can be accessed, depending on the tool	Only a few device APIs like geolocation can be accessed, but the number is growing
+UI Consistency	Platform comes with familiar, original UI components	UI frameworks can achieve a fairly native look	UI frameworks can achieve a fairly native look.
+Distribution	App stores provide marketing benefits, but also have requirements and restriction	App stores provide marketing benefits, but also have requirements and restriction	No restrictions to launch, but there are no app store benefits
+Performance	Native code has direct access to platform functionality, resulting in better performance	For complex apps, the abstraction layer often prevents native-like performance	Performance is based on browser and network connection
+Monetization	More monetization opportunities, but stores take a percentage	More monetization opportunities, but stores take a percentage	No store commissions or setup costs, but there are few monetization methods
+
+Web Architecture cannot be used for application development as it is slower and it doesn’t fulfill the requirements of the project in terms of device accessibility, user interaction and distribution. In terms of cost, platform independent and quicker development hybrid application is perfect choice. It requires the lowest development and maintenance effort since the iOS and Android apps can share a single codebase.  Table 1 summarizes the strengths and weaknesses of Native, Web, and Hybrid mobile application architectures.
+
+A Native architecture requires a different team for each platform development and its maintenance cost is more than that of Hybrid. The Hybrid application development is  simpler, more rapid and the application is easier to maintain.
+
+
+4.2 Hybrid User Interface Frameworks
+As mentioned in the Architecture section, hybrid user-interface technologies have been selected as the most appropriate trade-off between user experience and development effort for this project. Hybrid architectures implement one of two strategies for reusing a single code-base to generate apps for multiple platforms.
+
+The first strategy is abstraction: an app author writes their user interface in terms of abstracted user-interface elements, which the hybrid framework then translates to calls to native UI elements on each platform. Abstraction usually produces a responsive user interface because it uses native UI elements. However, since each abstraction must correspond to a native UI element on every platform, abstraction frameworks tend to support a ‘lowest common denominator’ of elements on every platform.
+
+The second strategy is mimicry. In this case, low-level drawing routines are used to generate interfaces that approximate the standard interfaces on each platform. While this allows framework authors to support more UI element types on all platforms, the use of low-level routines instead of optimized native UI elements results in reduced performance.
+
+Due to the popularity of web technologies like JavaScript, CSS, and HTML, they have been adopted by hybrid UI frameworks.
+
+A list of popular hybrid interface frameworks was collected from a series of web searches. All frameworks were added to Google Trends by searching the name of the framework with the word ‘tutorial’. As described by Carbonnelle (2016), this is expected to more accurately target the computer science usage of each term and aims to discover the interest in the development community for learning the technology in question. The top four most popular frameworks, as shown in Figure 3, will be evaluated further. Other hybrid frameworks not chosen for this evaluation include Onsen UI, the Intel XDK, Sencha Touch, Kendo UI, Framework 7, jQuery Mobile, Mobile Angular UI, Famo.us, Monaca, Trigger.io, and Appcelerator Titanium.
+ 
+Figure 3: The most popular hybrid app frameworks. Data source: (“Google Trends,” 2017)
+4.2.1 React Native
+React Native (“React Native”, 2017) is a UI framework originated by Facebook for use in its mobile applications. It is based on the same architecture as React (“React - a JavaScript Library”, 2017), the most popular UI framework for web applications (Malhortra, 2017), also by Facebook. It enables the use of a single JavaScript codebase for combined iOS and Android development, using common UI element abstractions.
+
+Figure 4 shows how React Native runs its business logic in the JavaScript thread on both platforms. It achieves similar performance to a true native app by using each platform’s native UI elements and rendering threads for graphics operations. Calderaio (2016), found that by using an additional thread to share the application’s workload, React Native applications generally run as smoothly as native apps, and can in fact be even more responsive.
+ 
+Figure 4: React Native architecture (Khichar, 2016). React Native applications run their JavaScript controllers and business logic in a separate thread. Native UI elements and controllers run on the main UI thread, just like they do in a fully native app.
+
+There are well-used React Native libraries implementing calendar and list views, which have licences compatible with use in commercial applications. Familiarity with the React Native architecture should transfer well to the React framework, and the react-native-web library (Gallagher, 2017) could be used to construct a web app for the Sandbox Project with minimal additional effort.
+4.2.2 Meteor
+The Meteor project (“Build Apps with JavaScript | Meteor”, 2017), proposed as the backend framework for the Sandbox app, also provides frontend UI capabilities using the Apache Cordova library. Cordova implements the mimicry strategy for hybrid mobile apps.
+
+The developer builds the user interface as a mobile webpage using one of the supported web frameworks. This webpage becomes part of the app’s user interface. When the app runs, a built-in WebView displays the mobile webpage as though it were a local app. This hybrid app architecture has the advantage of requiring development of only one codebase: the mobile webpage. Well-tested web libraries exist that could be used for the required event-list and calendar views. The mobile webpage could also be hosted for access through desktop browsers, adding that platform with no extra development effort. Compatible web user-interface frameworks include the mentioned React, Google’s AngularJS, and Meteor’s Blaze framework.
+4.2.3 Ionic
+Much like Meteor, the Ionic framework implements code generation tools to make it simple to build a hybrid mobile app. It also uses Apache Cordova and web technologies to mimic native user interfaces on the iOS and Android platforms. Ionic is tightly coupled with Google’s AngularJS framework for website user interfaces. Developers familiar with that tool should find Ionic familiar and simple to work with. As with the other solutions, libraries for calendar and list-views exist. As compared with user interfaces produced by React Native, those produced by Ionic perform less well, though they can automatically be generated for more platforms. This could be useful if the Nova Scotia Sandbox Platform needs to support more platforms in the future.
+4.2.4 Xamarin
+Unlike all the other frameworks which use JavaScript variants as their development languages, Xamarin apps are developed using C#. As such, it would be best suited to project teams that are already invested in the .NET platform. Xamarin lets the developer use a single language and code-base for Android and iOS development. Business logic is completely transferable between platforms, but the framework requires platform-specific code UI components. In exchange, Xamarin is able to provide the best user experience of all the evaluated frameworks.
+4.2.5 Summary
+Table 2 summarizes the attributes of the four described hybrid UI frameworks. Each framework offers a different trade-off between development effort and user experience.
+
+Table 2: Summary of UI framework options
+Desc.	Target Platforms	Dev. Languages	Strategy	Performance	Overall UX
+React Native	iOS
+Android	JSX
+(JavaScript)	Abstraction	Excellent	Good to Excellent
+Meteor	iOS
+Android
+Web
+Desktop	JavaScript 	Mimicry	Fair	Good
+Ionic	iOS
+Android
+Windows Phone
+Web
+Desktop	TypeScript
+(JavaScript)	Mimicry	Fair	Good
+Xamarin	iOS
+Android
+Windows Phone	C#	Native	Excellent	Excellent
+
+4.3 Backend Frameworks
+Backend frameworks are used to implement the server component of a mobile app. They store shared data and route communications between mobile devices. This section presents three backend frameworks that could be used for the sandbox mobile app: Meteor, the MEAN stack, and Firebase.
+4.3.1 Meteor
+Meteor is a free open-source JavaScript client and server application framework that can be used to build real-time web or mobile applications.
+How Meteor Works
+The Meteor architecture (Figure 5) is based on the following features, which enable automatic client and server synchronization whenever there is an update in the database.
+
+   
+Figure 5: Meteor architecture, based on MIT Tech Talk presented by Sashko Stubailo & Emily Stark (2014) 
+
+ 
+LiveQuery
+It queries the objects in MongoDB and fetches the results whenever changes or updates occur in the objects in real time. It is one of the server-side modules in the Meteor framework.
+Distributed Data Protocol (DDP)
+It establishes smooth communication and data synchronization between the frontend (client) and the backend (server) of the app. The Meteor framework uses the “Distributed Data protocol” (DDP) to communicate between client and server via websockets and reflect data changes automatically in real time. The DDP can be built with any server technology and can act as a backend for any frontend app. Meteor uses two types of DDP Application Programming Interface (API): Publish and Subscribe, and Remote Procedure Calls (RPC).
+1)	The Publish and Subscribe API is used to observe the data changes on the client/server side and keep the database up to date. 
+2)	The Remote Procedure Call API calls methods to write data into the database and can invoke third party APIs during runtime.
+MongoDB
+The Meteor framework uses MongoDB to store its server-side data and maintains a client-side  local copy of the data using miniMongo. It is a MongoDB API that implemented in JavaScript and it provides optimized user interface during the application runtime.
+Tracker
+Tracker is a Functional Reactive Programming (FRP) system that automatically detects when the functions depend on some data from the database. The trackers can find out the dependencies and update the relevant functions in the client side.
+Blaze
+It is a reactive HTML rendering system that updates the HTML view whenever there is an interaction between the user and the application.
+Flexibility
+Meteor provides an option to pull numerous packages during the development and quickly build a Minimum Viable Product (MVP). Instead of developers implementing in separate frameworks for the frontend and backend, the app can be built with a single framework which has code for both client and server in the same JavaScript file.
+Packaging Web Apps as Mobile Apps
+The Meteor framework provides an option to convert your web apps to iOS and Android  mobile apps quickly with the help of the integrated Apache Cordova plugin. Developers had to learn specific programming languages (iOS – Swift or Objective C; Android – Java) to build native mobile apps earlier. It is not required now, since Meteor has full Cordova platform integration that can be used to build native mobile apps with JavaScript. Cordova is a platform that allows building mobile apps with the help of HTML, CSS and JavaScript, and provides access to phone functions like Camera and Location through its API("Mobile | Meteor Guide", 2017).
+Development Community
+There is a Meteor development community online ("Meteor forums", 2017) to provide guidelines for using this  framework and fix issues instantly.
+
+5.1 Proposed Solution: Hybrid App with React Native and Meteor
+5.1.1 User-Interface Framework
+React Native is recommended as the user-interface framework for the Nova Scotia Sandbox App Project. React Native provides the dual advantages of near-native-level user experience by using the native UI elements, and low development and maintenance efforts since a single codebase can be used for both iOS and Android apps.
+Familiarization Time: 1 Week
+Implementation Time: 3 Weeks
+Framework Cost: Free
+5.1.2 Backend Framework
+The Meteor framework is the proposed solution to perform client- and server- side tasks and build the applications for mobile devices. It can be integrated with various mobile platforms, such as iOS, Android, BlackBerry and Windows. This framework is integrated with MongoDB to perform CRUD (Create, Read, Update and Delete) operations during the run time. By using this framework, there is no need to write separate code logic to handle synchronization across clients and servers. Meteor uses a "data on the wire" approach, which means it does not send data in HTML format through the network. Instead the data is continuously synchronized between the server and the client.
+Familiarization Time: 1 Week
+Implementation Time: 3 Weeks
+Cost: Free Framework with Usage-Based Hosting Cost
+5.1.3 Implemented Architecture
+The proposed solution implements a type of hybrid application architecture, while maintaining the same user-experience advantages of the native solution. Like with a traditional hybrid app, a single codebase is developed using web technologies. Native user interface elements are used, producing a smooth and familiar experience for the user. At the same time, only one codebase need be developed, requiring the same or less development effort as a WebView-style hybrid app.
+5.1.4 Schedule and Cost
+This design is estimated to require 13 weeks of combined effort, with 4 weeks for UI development, 5 weeks for backend development, and 4 weeks for integration and testing. All frameworks and tools are free, but there is an ongoing usage-based cost for Meteor hosting.
+
+ 
+5.2 Alternative 1: Hybrid App with Ionic Framework and Firebase
+5.2.1 User-Interface Framework
+The user-interface framework for Alternative 2 consists of a standard WebView which will load a mobile website within the app on each platform. The Ionic Framework provides a simple single-codebase solution for producing such a user interface, based on Apache Cordova and the AngularJS web framework. This will minimize development effort. Updates can be made to the mobile website by simply changing it on the server side, reducing the need for users to update the entire client. At the same time, using a mobile website view will not produce as fluid or familiar an experience on the two targeted mobile platforms.
+Familiarization Time: 1 Week
+Implementation Time: 3 Weeks
+Framework Cost: Free
+5.2.2 Backend Framework
+Firebase is an alternative backend cloud system which can be integrated with Ionic framework to build real time hybrid mobile apps. Database hosted in the cloud and data stored as standard JSON documents that can be accessed using a client library during the run time. It also offers simple login service to authenticate users and secure database in the cloud that can be accessed anywhere.
+Familiarization Time: 1 Week
+Implementation Time: 2 Weeks
+Cost: Free Framework with Usage-Based Hosting Cost
+
+ 
+5.2.3 Implemented Architecture
+This solution implements a traditional hybrid app using Ionic’s cross-platform WebView and the AngularJS web UI framework. It offers the lowest development effort of the three options since the team is already familiar with web technologies and only a single codebase need be developed. To achieve this, it will sacrifice some responsiveness in the final app.
+5.2.4 Schedule and Cost
+This design is estimated to require 11 weeks of combined effort, with 3 weeks for UI development, 4 weeks for backend development, and 4 weeks for integration and testing. There are no up-front framework or tool costs, but Firebase will charge a usage-based fee after launch.
+
+
+ 
+5.3 Alternative 2: Hybrid App with Xamarin and MEAN Stack
+5.3.1 User-Interface Framework
+For this alternative, the Xamarin framework would be used to develop native UIs for both Android and iOS. While this would produce applications with the highest-quality user experience, it would require more development time than we have available. This is because Xamarin requires the developer to code native interfaces for each platform they wish to support.
+Familiarization Time: 1 Week
+Implementation Time: 5 Weeks
+Framework Cost: Free
+5.3.2 Backend Framework
+MEAN is an open-source mobile or web application development stack that helps to build “native-looking” hybrid mobile apps with optimized UI design elements. It is built on top of AngularJS, Express, NodeJS and MongoDB. It also has various in-built plugins and packages that support cross-platform web and mobile applications. It can be integrated with the Xamarin framework to build fast and responsive mobile apps.Here we suggest using its ‘backend’ technologies, Express, NodeJS, and MongoDB for the required server-side elements of the project. 
+Familiarization Time: 1 Week
+Implementation Time: 4 Weeks
+Cost: Free Framework with Cloud Hosting Costs
+5.3.3 Implemented Architecture
+Xamarin’s architecture allows a single codebase to be developed to support all platforms. Business logic can be shared without modification, but UI code must be developed completely for each platform.
+5.3.4 Schedule and Cost
+This design is estimated to require 15 weeks of combined effort, with 6 weeks for UI development, 5 weeks for backend development, and 4 weeks for integration and testing. All tools and frameworks used are free, and the cloud host for the MEAN stack will incur an ongoing hosting fee.
+
+ 
+5.4 Evaluation
+5.4.1 User-Interface Framework
+Table 5 shows a side-by-side comparison of the alternatives from the standpoints of UI development and maintenance effort, technical knowledge required, and user-interface performance. Overall User eXperience (UX) is also evaluated. 
+
+Table 5: Alternative Comparison: UI
+Alternative	Dev. Effort	Maint. Effort	Knowledge
+Required	Performance	Overall UX
+Proposed
+(React Native)	Low	Low	Low	Excellent	Good to Excellent
+Alt. 1 (Ionic)	Low	Low	Low	Fair	Good
+Alt. 2
+(Xamarin)	High	High	Low	Excellent	Excellent
+
+Single-codebase frameworks are considered to require the lowest amount of development and maintenance effort. Frameworks requiring knowledge of a single technology (e.g. JavaScript) are considered to have the lowest technical knowledge requirements. The performance of native UI elements is the best, with WebView-style user interfaces considered to be significantly less responsive. User experience is evaluated as the combination of UI performance and a look and feel that fits with the expectations for a given platform. The best look and feel is achieved with a UI consisting of entirely native elements, and the ability to use all elements supported on a particular platform. UI frameworks that can only implement a limited number of native elements, or that mimic the appearance of a native UI are rated less well.
+
+Based on these criteria, the proposed solution (React Native) provides the best UX while limiting required development effort and knowledge. Its ability to use true native UI elements as necessary for optimization means that its performance and UX can be excellent. In contrast, Alternative 1 with Ionic leans too far towards minimizing development effort. Its user experience suffers. Alternative 2 with Xamarin leans too far towards prioritizing UX. As it requires a separate development effort for each platform user interface, its overall development effort is too high. All three options require only knowledge of a single programming language: JSX for React Native, Typescript for Ionic, and C# for Xamarin.
+5.4.2 Server Framework
+Table 6 summarizes the performance of Meteor, MEAN stack and Firebase frameworks based on the real time application development.
+
+Table 6: Alternative Comparison: Backend
+Option	Cost	Dev. Time	User Interface	Debug
+Ease	Learning Curve	Scalability
+Proposed
+(Meteor)	Hosting	Less	Excellent. Offers “Optimistic UI Updates”	Easy	Easy to Learn	Millions of users
+Alt. 1
+(MEAN Stack)	Hosting	Average	Good. Offers more mobile design element options	Hard	Components such as AngularJS and Express have a higher learning curve	Thousands of users
+Alt. 2
+(Firebase)	Per Use	Longer	Good	Hard	Higher learning curve	Thousands of users
+
+Major features of the MEAN stack framework (Alternative 1) that can be useful in developing the current Sandbox mobile app are("home - Mongo Express Angular Node", 2017):
+?	Native mobile controls and standard design elements for building mobile apps.
+?	Cross-platform support (same code can be compiled for Android and iOS platforms).
+?	Provide options for development with various smart packages.
+?	Implements stylish UI for mobile apps (with integration of Ionic).
+
+One of the disadvantages of using MEAN stack framework is that it has to support various platforms with a single codebase which makes debugging harder in real time.
+
+On the other hand, Firebase (Alternative 2) is a cloud-based backend platform that can be integrated with other frontend frameworks to build rich and interactive mobile apps. Even though it has a readily-available database hosted on the cloud, it has several disadvantages(“Dey, Quora”, 2017): 
+?	Depending on the database updates to reflect the changes on the frontend varies;
+?	No synchronization between client and server during the offline mode;
+?	Not able to migrate the apps because the data is stored as JSON documents;
+?	Poor performance due to database disruption.
+
+However, Meteor (Proposed Solution) is a full-stack development framework that can be used for performing operations on the client and server sides during runtime and, moreover, it is integrated with the miniMongo API. Since it is a free and open source framework, the developer does not need to worry about the cost of using the framework when developing apps for this project. It also creates a reactiveUI that is always up to date with the data which increases the application performance. With the help of “Kadira” (i.e., performance monitoring and error tracking system), we can track and monitor the Meteor framework. This system also has tools which help with identifying and fixing issues in development and production ("Kadira - Performance Management Platform for Meteor | Kadira Platform", 2017).
+
+The latest version of the Meteor framework includes the new feature called  “Oplog tailing” that can be used to monitor changes in the database and helps the server to automatically transmit updates to the client in real time (Coleman, 2014). The Meteor framework uses less memory and helps to push the relevant data to the front end instantly, saving computation time.
+
+The proposed solution incorporates the Meteor framework because it has the following advantages over the alternatives("Why you should check out Meteor.js", 2017):
+?	Ability to launch mobile apps even with slower network connectivity;
+?	Many in-built packages and plugin support;
+?	Same code for web browsers as well as mobile devices;
+?	Reduced time of application development and high quality of produced output;
+?	Ability to send push notifications to users dynamically;
+?	Automatic synchronization between clients and server;
+?	Ability to deploy new features and bug fixes bypassing app store;
+?	Changes appear instantly on user devices without refreshing the page.
+5.4.3 Schedule and Cost
+Table 7 compares the proposed alternatives based on our development time efforts for the user interface and all server infrastructure. Four weeks of integration and testing time are assumed for each option.
+
+Table 7: Alternative Comparison: Schedule and Cost. Four weeks of integration and testing time is assumed for each.
+Alternative	UI Dev. Time
+(weeks)	Server Dev.
+Time
+(weeks)	Total Dev.
+Time
+(weeks)	Initial Cost	Ongoing Cost
+Proposed
+	4	4	12	Free	Hosting
+(Meteor)
+Alt. 1	4	3	11	Free	Hosting
+(MongoDB/Express)
+Alt. 2	6	5	15	Free	Usage (Firebase)
+
+In all cases, the frameworks used are free for development and can be used in production systems without cost. The third-party costs for each solution are determined by the server hosting solutions. Hosting costs for Meteor and Firebase are expected to be comparable, as they are full cloud platform-as-a-service solutions. MongoDB and Express from the MEAN stack in Alternative 1 can be run using cloud infrastructure-as-a-service solutions like Amazon AWS, so it would be possible to trade some additional development time for a lower cost in that case.
+
+Based on costs and required development times, Alternative 1 is the most economical option. Alternative 2 requires more development time than is available for this project. The proposed solution will make use of all the available development time.
+
+
+ 
+6 Conclusion
+The Nova Scotia Sandbox App Project aims to create synchronized iOS and Android apps as the single point of contact for the seven sandboxes in Nova Scotia. The apps will support calendar and list views of news and events, which can be navigated using sort, search, and filter features. They will offer an admin interface for sandbox managers to upload new content, and will have integrations with the most appropriate social media platforms.
+
+This report explores a variety of mobile app architectures, user-interface frameworks, server frameworks, and social media integrations that could be used in the construction of the sandbox app. Three complete design alternatives for the mobile app are proposed and evaluated.
+
+The recommended frontend framework, React Native, is a hybrid framework that will provide the best possible user experience while keeping development time within the available 12-week window. The selected technologies all have active communities, based on Google Trends data. Meteor, the recommended backend framework, specializes in simple synchronization between devices using DDP and support of offline interactions using miniMongo. Finally, evaluations of most popular social networking platforms have driven recommendations of those with the largest reach that also have suitable public APIs.
+7 Recommendations
+We propose implementing the project by creating a hybrid app using React Native Framework for the user interface and the Meteor Framework for the backend. Both of these frameworks support multiple platforms and would allow a single implementation of the app to run on both Android and iOS devices. They provide familiar, responsive user experiences on each platform with native user-interface elements. We also propose integration of Facebook, Twitter, Instagram, LinkedIn, Microsoft Outlook Calendar and Google Calendar platforms into the app as they would allow our users to easily interact with each other as well as attract new users. Proposed platforms are estimated to have a huge impact on the app’s usability and user experience at little development cost. This solution offers the best trade-off of development effort with user experience. It will also allow the option for future development of a mobile website with minimal effort.
+8 References
+An Introduction to the MEAN Stack. (2017). SitePoint. Retrieved 26 July 2017, from https://www.sitepoint.com/introduction-mean-stack/
+
+Calderaio, J. A. (2017). Comparing the Performance between Native iOS (Swift) and React-Native. Retrieved July 23, 2017, from https://medium.com/the-react-native-log/comparing-the-performance-between-native-ios-swift-and-react-native-7b5490d363e2
+
+Carbonnelle, P. (2016). PYPL PopularitY of Programming Language index. Retrieved July 25, 2017, from http://pypl.github.io/PYPL.html
+
+Coleman, T. (2014). Scaling Meteor: The Challenges of Real-time Apps. Retrieved July 27, 2017, from https://www.discovermeteor.com/blog/scaling-meteor-the-challenges-of-realtime-apps/
+
+Dey A, (2016). Quora, Retrieved 26 July 2017, https://www.quora.com/What-are-the-disadvantages-of-using-Firebase-as-backend-for-mobile-app
+
+Facebook for Developers. (2017). Retrieved July 27, 2017, from https://developers.facebook.com/
+
+Firebase vs meteor which one is good. (2015). Retrieved July 27, 2017, from https://issuu.com/valuecoders/docs/firebase_v-s_meteor_-_which_one_is_
+
+Gallagher, N. (2017). react-native-web: React Native for Web. JavaScript. Retrieved from https://github.com/necolas/react-native-web (Original work published June 9, 2015)
+
+Google Calendar API  |  Google Developers. (2017). Retrieved July 27, 2017, from https://developers.google.com/google-apps/calendar/
+
+Google Trends. (2017). Retrieved July 25, 2017, from https://www.google.com/trends
+
+Group, M. D. (2017). Build Apps with JavaScript | Meteor. Retrieved July 23, 2017, from https://www.meteor.com/
+
+Home | LinkedIn Developer Network. (2017). Retrieved July 27, 2017, from https://developer.linkedin.com
+
+Home - Mongo Express Angular Node. (2017). Mongo Express Angular Node. Retrieved 27 July 2017, from http://mean.io/
+
+iCloud Calendar API | Easy Apple Calendar API integration with Cronofy. (2017). Retrieved July 27, 2017, from https://www.cronofy.com/icloud-calendar-api/
+
+Instagram Developer Documentation. (2017). Retrieved July 27, 2017, from https://www.instagram.com/developer/
+
+Ivany, R., d’Entremont, I., Christmas, D., Fuller, S., & Bragg, J. (2014). Now or Never: An Urgent Call to Action for Nova Scotians. One Nova Scotia. Retrieved from https://onens.ca/img/now-or-never.pdf
+
+Kadira - Performance Management Platform for Meteor | Kadira Platform. (2017). Retrieved July 27, 2017, from https://old.kadira.io/platform
+
+Kanjilal, J. (2015). Exploring the MVC, MVP, and MVVM design patterns. Retrieved July 25, 2017, from http://www.infoworld.com/article/2926003/microsoft-net/exploring-the-mvc-mvp-and-mvvm-design-patterns.html
+
+Khichar, B. (2016). Awesome React Native: Building Android App | ReactJS Development. Retrieved July 23, 2017, from https://codebrahma.com/awesome-react-native-building-android-app-javascript/
+
+Korf, M., & Oksman, E. (2016). Native, HTML5, or Hybrid: Understanding Your Mobile Application Development Options - developer.force.com. Retrieved July 25, 2017, from https://developer.salesforce.com/page/Native,_HTML5,_or_Hybrid:_Understanding_Your_Mobile_Application_Development_Options
+
+Malhortra, M. (2017). Vue.js Is Good, But Is It Better Than Angular Or React? Retrieved July 22, 2017, from https://www.valuecoders.com/blog/technology-and-apps/vue-js-comparison-angular-react/
+
+Matney, L. (2017). Google has 2 billion users on Android, 500M on Google Photos. Retrieved July 27, 2017, from http://social.techcrunch.com/2017/05/17/google-has-2-billion-users-on-android-500m-on-google-photos/
+
+Meteor forums. (2017). Meteor forums. Retrieved 27 July 2017, from https://forums.meteor.com/
+
+Microsoft by the Numbers. (2017). Retrieved July 27, 2017, from http://news.microsoft.com/bythenumbers/outlook-users
+
+Miller, C. (2016). Apple says it now has 1 billion total active devices. Retrieved July 27, 2017, from https://9to5mac.com/2016/01/26/apple-active-devices-number/
+
+Mobile | Meteor Guide. (2017). Guide.meteor.com. Retrieved 27 July 2017, from https://guide.meteor.com/mobile.html
+
+Outlook Dev Center. (2017). Retrieved July 27, 2017, from https://developer.microsoft.com/en-us/outlook/
+
+Pronschinske, M. (2014). The State of Native vs. Web vs. Hybrid - DZone Mobile. Retrieved July 27, 2017, from https://dzone.com/articles/state-native-vs-web-vs-hybrid
+
+React Native | A framework for building native apps using React. (2017). Retrieved July 22, 2017, from https://facebook.github.io/react-native/index.html
+
+reddit.com: api documentation. (2017). Retrieved July 27, 2017, from https://www.reddit.com/dev/api/
+
+REST APIs — Twitter Developers. (2017). Retrieved July 27, 2017, from https://dev.twitter.com/rest/public
+
+Sashko Stubailo, & Emily Stark. (2014). MIT Tech Talk: Designing a New Platform for Modern Apps. Retrieved from https://www.youtube.com/watch?v=FsnZB6yRimI
+
