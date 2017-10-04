@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<title>First screen</title>
+		
+	<style>
+		
+* {
+background-color: white;
+}
+	
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+	background-color: PapayaWhip;
+}			
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+	
+<script>
+	
+function myFunction1() {		
+var sel = document.getElementById("optionValue");
+var text= sel.options[sel.selectedIndex].text;
+var fieldValue = document.getElementById('test1').value;
+		
+localStorage.setItem('t1',text);	
+localStorage.setItem('te1',fieldValue);
+	}
+	
+	function myFunction2() {
+		
+	 var fVal1 = localStorage.getItem('fe1');
+     var fVal2 = localStorage.getItem('fe2');
+	 var fVal3 = localStorage.getItem('fe3'); 		
+	 var fVal4 = localStorage.getItem('fe4');
+	 var fVal5 = localStorage.getItem('fe5');
+	 var fVal6 = localStorage.getItem('fe6');
+	 var fVal7 = localStorage.getItem('fe7');
+	 var fVal8 = localStorage.getItem('fe8');
+	
+	
+if(fVal1) {
+ if( document.getElementById("hidethis").style.display=='none' ){
+   document.getElementById("hidethis").style.display = 'table-row'; // set to table-row instead of an empty string
+	 document.getElementById('tValue0').innerHTML = fVal2;
+	 document.getElementById('tValue1').innerHTML = fVal3;
+	 document.getElementById("hidethis3").style.display = 'table-row';
+	 document.getElementById('tValue2').innerHTML = fVal4;
+	 document.getElementById("hidethis4").style.display = 'table-row';
+	 document.getElementById('tValue3').innerHTML = fVal5;
+	 document.getElementById("hidethis5").style.display = 'table-row';
+	 document.getElementById('tValue4').innerHTML = fVal6;
+	 document.getElementById("hidethis2").style.display =  'none';
+	if(fVal7 == "Australia") {
+	document.getElementById("hidethis6").style.display = 'table-row'; 
+	 document.getElementById('tValue5').innerHTML = fVal7;
+	 document.getElementById('tValue6').innerHTML = fVal8;	
+	}
+	else {
+		document.getElementById("hidethis6").style.display = 'none';
+	}
+	 
+ }
+	else {
+		
+	}
+	
+	}
+		else {
+			document.getElementById("hidethis").style.display = 'none';
+			document.getElementById("hidethis3").style.display = 'none';
+			document.getElementById("hidethis4").style.display = 'none';
+			document.getElementById("hidethis5s").style.display = 'none';
+			document.getElementById("hidethis2").style.display =  'table-row';
+		}
+		
+		localStorage.removeItem('fe1');
+		
+	}
+	
+	
+function myFunction3() {
+	
+	var aValue1 = "yes";
+	var sel = document.getElementById("optionValue");
+    var text1= sel.options[sel.selectedIndex].text;
+	var aValue2 = document.getElementById('test1').value;
+	
+	//localStorage.setItem('v2',aValue1);
+	//localStorage.setItem('t2',text1);
+	//localStorage.setItem('t3',aValue2);
+	
+	var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+	if(existingEntries == null) existingEntries = [];
+	
+	var entry = {
+        "title": aValue1,
+        "optionValue": text1,
+		"income": aValue2
+    };
+	
+    localStorage.setItem("entry", JSON.stringify(entry));
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));      
+	
+}
+	
+	</script>
+	
+	<h3>Gifts from individuals</h3>
+	</head>
+
+<body onload="myFunction2();">
+	<br>
+	<table>
+  <tr>
+    <th>Country</th>
+    <th>Anticipated Income</th>
+
+  </tr>
+  <tr id="hidethis2">
+    <td>
+
+	  </td>
+	  <td>
+	  No data available in the table
+	  </td>
+		</tr>
+		<tr id="hidethis" style="display:none;">
+<td>
+	<div id = "tValue0"></div>
+			</td>
+<td
+	<div id = "tValue1"></div>
+			</td>
+</tr>
+
+		<tr id="hidethis6" style="display:none;">
+<td>
+	<div id = "tValue5"></div>
+			</td>
+<td
+	<div id = "tValue6"></div>
+			</td>
+</tr>
+
+<tr id="hidethis3" style="display:none;">
+<td>
+	Subtotal from Canada
+			</td>
+<td
+	<div id = "tValue2"></div>
+			</td>
+</tr>
+<tr id="hidethis4" style="display:none;">
+<td>
+	Subtotal from Outside Canada
+			</td>
+<td
+	<div id = "tValue3"></div>
+			</td>
+</tr>
+<tr id="hidethis5" style="display:none;">
+<td>
+	Total
+			</td>
+<td
+	<div id = "tValue4"></div>
+			</td>
+</tr>
+
+</table>
+	<br>
+	<br>
+		<h3>Add Gifts from individuals</h3>
+	
+	<select id = "optionValue">
+  <option value="CA">Canada</option>
+  <option value="USA">UnitedStates</option>
+  <option value="AU">Australia</option>
+</select>
+	  <br><br>
+    <label> Income</label>    
+	<input type = "text" id = "test1" value = "" />
+	<a style = "text-decoration: underline;" href = "Gifts2.html" onclick = "myFunction1()">Next</a>
+    <a style = "text-decoration: underline;" href = "Gifts2.html" onclick = "myFunction3()">Add</a>
+	</body>
+
+</html>

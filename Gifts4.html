@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<title>Second screen</title>
+		
+	<style>
+		
+* {
+background-color: white;
+}
+	
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+	background-color: PapayaWhip;
+}			
+
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+	
+<script>
+function move() {
+  var sVal1 = localStorage.getItem('t1');
+  var sVal2 = localStorage.getItem('te1');
+	
+  if(sVal1 == "Canada") {	
+
+	  document.getElementById('sValue0').innerHTML = sVal1;
+	  document.getElementById('sValue1').innerHTML = sVal2;
+	  document.getElementById('sValue2').innerHTML = sVal2;
+      document.getElementById('sValue3').innerHTML = "0.0";
+	  document.getElementById('sValue4').innerHTML = sVal2;
+  }
+	else {
+	  document.getElementById('sValue0').innerHTML = sVal1;
+	  document.getElementById('sValue1').innerHTML = sVal2;
+	  document.getElementById('sValue2').innerHTML = "0.0";
+      document.getElementById('sValue3').innerHTML = sVal2;
+	  document.getElementById('sValue4').innerHTML = sVal2;
+	}
+	
+	//var rValue1 = localStorage.getItem(records[bClicked]);
+	//var sValue1 = localStorage.getItem(records[optionValue]);
+	//var sValue2 = localStorage.getItem(records[income]);
+	
+	
+	var storedData = JSON.parse(localStorage.getItem("entry"));
+	var storedCompleteData = JSON.parse(localStorage.getItem("allEntries"));
+	console.log(storedData);
+    console.log(storedCompleteData); 
+	console.log(storedCompleteData.length);
+	
+	console.log(storedCompleteData.optionValue);
+
+
+   
+    
+
+	
+	
+     
+	//if(rValue1) {		
+	var table = document.getElementById("myTable");
+	
+    var row = table.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = sValue1; 
+    cell2.innerHTML = sValue2;
+	document.getElementById('sValue3').innerHTML = sValue2;	
+	document.getElementById('sValue4').innerHTML = +sValue2 + +sVal2; 
+	
+	//}
+	//else {
+		
+	//}
+	localStorage.removeItem('v2');
+}
+	
+	
+	function passValue() {
+		
+		var fValue1 = document.getElementById('test01').value;
+		localStorage.setItem('fe1',fValue1); 
+		
+		var fValue2 = document.getElementById('sValue0').innerHTML;
+		var fValue3 = document.getElementById('sValue1').innerHTML;
+		var fValue4 = document.getElementById('sValue2').innerHTML;
+		var fValue5 = document.getElementById('sValue3').innerHTML;
+		var fValue6 = document.getElementById('sValue4').innerHTML;
+	
+		var fValue7 = document.getElementById("myTable").rows[2].cells[0].innerHTML;  
+		var fValue8 = document.getElementById("myTable").rows[2].cells[1].innerHTML;  
+		
+		localStorage.setItem('fe2',fValue2); 
+		localStorage.setItem('fe3',fValue3); 
+		localStorage.setItem('fe4',fValue4); 
+		localStorage.setItem('fe5',fValue5); 
+		localStorage.setItem('fe6',fValue6); 
+		localStorage.setItem('fe7',fValue7); 
+		localStorage.setItem('fe8',fValue8); 
+		
+	}
+	
+	
+	</script>
+	
+	<h3>Gifts from individuals</h3>
+	</head>
+
+<body onload="move();">
+	<br>
+	<table id="myTable">
+  <tr>
+    <th>Country</th>
+    <th>Anticipated Income</th>
+
+  </tr>
+  <tr>
+    <td>
+       <div id = "sValue0"></div>
+	  </td>
+	  <td>
+	  <div id = "sValue1"></div>
+	  </td>
+		</tr>
+		<tr>
+    <td>
+       Subtotal from Canada
+	  </td>
+	  <td>
+	  <div id = "sValue2"></div>
+	  </td>
+		</tr>
+		<tr>
+    <td>
+       Subtotal from Outside Canada
+	  </td>
+	  <td>
+	  <div id = "sValue3"></div>
+	  </td>
+		</tr>
+		<tr>
+    <td>
+       Total
+	  </td>
+	  <td>
+	  <div id = "sValue4"></div>
+	  </td>
+		</tr>
+		
+</table>
+	<br>
+	<br>
+		<h3>Add Gifts from individuals</h3>
+	      
+	     <p>New array: <span id="demo"></span></p>
+	  <br><br>
+	<form action="Gifts1.html">
+   <input type="submit" id = "test01" value="Add another" class="button button5" onclick="passValue()" />
+	</form>
+	</body>
+
+</html>
