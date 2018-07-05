@@ -1,0 +1,10 @@
+/*
+
+CSS style for git-admin web page:
+
+*/
+
+.container   { display: table;      }
+.subject,.appid, .mail,.division,.section,.description    { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }

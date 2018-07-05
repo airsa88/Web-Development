@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <link type="text/css" rel="stylesheet" href="style.css">
+		 
+		<title>Git Admin-Web app</title>
+	</head>
+
+<body id="main">
+<legend>Git-Admin Home page</legend>
+<br>
+<div class="container" id="container">
+    <div class="subject" style="display:none">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" value="test" />
+    </div>
+	<br>
+    <div class="appid">
+        <label for="appID">eAppID</label>
+        <input type="text" name="appID" id="appID" value=""/>
+		<span id="errfn"></span>
+    </div>
+	
+	<br>
+	<div class="mail">
+        <label for="mail">Manager's Email</label>
+        <input type="text" name="Email" id="Email" value="" />
+    </div>
+	<br>
+	<div class="division">
+        <label for="division">Division</label>
+         <input type="text" name="division" id="division" value="" />
+    </div>
+	<br>
+	<div class="section">
+        <label for="section">Section</label>
+         <input type="text" name="section" id="section" value="" />
+    </div>
+	<br>
+	<div class="description">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" value=""></textarea>
+    </div>
+	<br>
+    <div class="submit_Action">
+        <a id="send-email" href=""><button>Send email</button></a> 
+    </div>
+</div>
+<script type="text/javascript" src="helperMethods.js"></script>
+</body>
+</html>
