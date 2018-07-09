@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <link type="text/css" rel="stylesheet" href="style.css">
+		 
+		<title>Git Admin-Web app</title>
+	</head>
+
+<body id="main">
+<legend>Git-Admin Home page</legend>
+<br>
+
+<div class="container" id="container">
+    <div class="subject" style="display:none">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" value="test" />
+    </div>
+	<br>
+    <div class="appid">
+        <label for="appID">eAppID</label>
+        <input type="text" name="appID" id="appID" value=""/>
+		<span id="errfn"></span>
+    </div>
+	
+	<br>
+	<div class="mail">
+        <label for="mail">Manager's Email</label>
+        <input type="text" name="Email" id="Email" value="" />
+    </div>
+	<br>
+	<div class="division">
+        <label for="division">Division</label>
+         <input type="text" name="division" id="division" value="" />
+    </div>
+	<br>
+	<div class="section">
+        <label for="section">Section</label>
+         <input type="text" name="section" id="section" value="" />
+    </div>
+	<br>
+	<div class="description">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" value=""></textarea>
+    </div>
+	<div class="description">
+        <label for="description">LAN User Id</label>
+        <textarea name="lUserId" id="lUserId" value=""></textarea>
+    </div>
+	<div class="description">
+        <label for="description">Backup LAN User Id</label>
+        <textarea name="bkupUserId" id="bkupUserId" value=""></textarea>
+    </div>
+	<br>
+    <div class="submit_Action">
+        <button type="button" onclick="validateFields()">Send email</button>
+    </div>
+</div>
+<div>
+
+<a id="send-email" href=""></a>
+</div>
+
+<div id="validation">
+<table id="validationErrors">
+<tr>
+<td id="errorHeader" align="left" style="display:none;color:red" value="">
+You must correct the following errorss before proceeding:
+</td></tr>
+<tr>
+<td align="left" id="appIdCheck"></td>
+</tr>
+<tr>
+<td align="left" id="emailCheck"></td>
+</tr>
+<tr>
+<td align="left" id="divisionCheck"></td>
+</tr>
+<tr>
+<td align="left" id="sectionCheck"></td>
+</tr>
+<tr>
+<td align="left" id="descriptionCheck"></td>
+</tr>
+<tr>
+<td align="left" id="userIdCheck"></td>
+</tr>
+<tr>
+<td align="left" id="bkupUserIdCheck"></td>
+</tr>
+
+<script type="text/javascript" src="helperFunctions.js"></script>
+</body>
+
+</html>
